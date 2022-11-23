@@ -17,9 +17,9 @@ export const initdb = async () =>
 export const putDb = async (content) => {
   console.log('PUT to the database');
 
-  const contactDb = await openDB('jate_db', 1);
+  const jate = await openDB('jate_db', 1);
 
-  const tx = contactDb.transaction('jate', 'readwrite');
+  const tx = jate.transaction('jate', 'readwrite');
 
   const store = tx.objectStore('jate');
   
