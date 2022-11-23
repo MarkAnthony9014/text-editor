@@ -32,3 +32,7 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+window.addEventListener('load', function () {
+  document.getElementById('logo').src = Logo;
+});
