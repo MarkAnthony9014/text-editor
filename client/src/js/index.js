@@ -3,6 +3,7 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 import Logo from '../images/logo.png';
+import { initdb } from './database'
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
@@ -34,5 +35,8 @@ if ('serviceWorker' in navigator) {
 }
 
 window.addEventListener('load', function () {
+  initdb();
+
   document.getElementById('logo').src = Logo;
+
 });
