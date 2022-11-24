@@ -34,5 +34,5 @@ if ('serviceWorker' in navigator) {
 }
 
 window.addEventListener('load', function () {
-  document.getElementById('logo').src = Logo;
+  navigator.serviceWorker.register('./service-worker.js')
 });
