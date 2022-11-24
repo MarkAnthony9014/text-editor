@@ -23,6 +23,7 @@ export const putDb = async (content) => {
 
   const store = tx.objectStore('jate');
   
+  //.put or .add? 
   const request = store.put({ note: content });
 
   const result = await request;
